@@ -39,7 +39,7 @@
     window.onload = function() {
       // Begin Swagger UI call region
       const ui = SwaggerUIBundle({
-		urls: [{name:'customer',url:window.location.protocol + '//' + window.location.host + '/config/customer.json'},{name:'weather',url:window.location.protocol + '//' + window.location.host +'/config/weather-swagger.yaml'}],
+		urls: [{name:'customer','/config/customer.json'},{name:'weather','/config/weather-swagger.yaml'}],
         dom_id: '#swagger-ui',
         deepLinking: true,
         presets: [
