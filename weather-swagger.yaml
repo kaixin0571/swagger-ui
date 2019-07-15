@@ -7,12 +7,10 @@ info:
     email: "hello@163.com"
 host: "www.tianqiapi.com"
 securityDefinitions:
-  api_key:
-    type: apiKey
-    name: x_api_key
-    in: header
-security:
-  - x_api_key: ["LL123456","ASDSSA000"]
+  tokenAuth:
+    type: "apiKey"
+    name: "x_sng_api_key"
+    in: "header"
 schemes:
   - https
 paths:
@@ -22,6 +20,8 @@ paths:
         - "一周天气预报"
       summary: "通用接口文档(7天) - 3小时更新一次"
       description: "通用接口文档(7天) - 3小时更新一次"
+      security:
+        - tokenAuth: []
       produces:
         - application/json
       parameters:
