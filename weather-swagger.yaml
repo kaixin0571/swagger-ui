@@ -11,6 +11,8 @@ schemes:
 paths:
   /api:
     get:
+      tags:
+        - "一周天气预报"
       summary: "通用接口文档(7天) - 3小时更新一次"
       description: "通用接口文档(7天) - 3小时更新一次"
       produces:
