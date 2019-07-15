@@ -1,0 +1,32 @@
+swagger: "2.0"
+info:
+  title: "天气预报 API"
+  description: "一周天气预报".
+  version: 1.0.0
+  contact:
+    email: "hello@163.com"
+host: "www.tianqiapi.com"
+schemes:
+  - https
+paths:
+  /api:
+    get:
+      summary: "通用接口文档(7天) - 3小时更新一次".
+      description: "通用接口文档(7天) - 3小时更新一次".
+      produces:
+        - application/json
+      parameters:
+        - name: "version"
+          in: "query"
+          type: "string"
+          default: "v1"
+          description: "接口标识"
+          required: true
+        - name: "city"
+          in: "query"
+          type: "string"
+          description: "城市名称, 不要带市和区"
+          required: false
+      responses:
+        200:
+          description: OK
