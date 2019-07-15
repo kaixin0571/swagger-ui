@@ -4,6 +4,8 @@ info:
   description: "一周天气预报"
   version: 1.0.0
   contact:
+    name: "kaixin"
+    url: "https://github.com/kaixin0571"
     email: "hello@163.com"
 host: "www.tianqiapi.com"
 securityDefinitions:
