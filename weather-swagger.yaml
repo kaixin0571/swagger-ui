@@ -1,0 +1,49 @@
+swagger: "2.0"
+info:
+  title: "天气预报 API"
+  description: "一周天气预报"
+  version: 1.0.0
+  contact:
+    name: "kaixin"
+    url: "https://github.com/kaixin0571"
+    email: "hello@163.com"
+host: "www.tianqiapi.com"
+securityDefinitions:
+  tokenAuth:
+    type: "apiKey"
+    name: "x_sng_api_key"
+    in: "header"
+tags:
+  - name: "weather"
+    description: "一周天气"
+  - name: "oneweek"
+    description: "one week weather"
+schemes:
+  - https
+paths:
+  /api:
+    get:
+      tags:
+        - "weather"
+        - "oneweek"
+      summary: "通用接口文档(7天) - 3小时更新一次"
+      description: "通用接口文档(7天) - 3小时更新一次"
+      security:
+        - tokenAuth: []
+      produces:
+        - application/json
+      parameters:
+        - name: "version"
+          in: "query"
+          type: "string"
+          default: "v1"
+          description: "接口标识"
+          required: true
+        - name: "city"
+          in: "query"
+          type: "string"
+          description: "城市名称, 不要带市和区"
+          required: false
+      responses:
+        200:
+          description: OK
