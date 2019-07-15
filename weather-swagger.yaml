@@ -11,13 +11,19 @@ securityDefinitions:
     type: "apiKey"
     name: "x_sng_api_key"
     in: "header"
+tags:
+  - name: "weather"
+    description: "一周天气"
+  - name: "oneweek"
+    description: "one week weather"
 schemes:
   - https
 paths:
   /api:
     get:
       tags:
-        - "一周天气预报"
+        - "weather"
+        - "oneweek"
       summary: "通用接口文档(7天) - 3小时更新一次"
       description: "通用接口文档(7天) - 3小时更新一次"
       security:
